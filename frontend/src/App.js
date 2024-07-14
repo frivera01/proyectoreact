@@ -18,7 +18,7 @@ const App = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+    const apiUrl = process.env.REACT_APP_API_URL || 'https://proyectoreact-nine.vercel.app/';
     fetch(`${apiUrl}/api/products`)
       .then((response) => response.json())
       .then((data) => {
