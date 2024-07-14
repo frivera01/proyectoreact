@@ -1,0 +1,31 @@
+/* Footer.module.css */
+
+.footer {
+  background-color: #4CAF50; /* Verde */
+  color: #FFF;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footerText {
+  margin: 5px;
+  font-size: 14px;
+}
+
+.footerText:last-child {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+}

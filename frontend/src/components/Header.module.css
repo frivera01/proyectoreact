@@ -1,0 +1,62 @@
+/* Header.module.css */
+
+.header {
+  background-color: #FF5722; /* Naranja */
+  color: #FFF;
+  padding: 10px 20px; /* Aumentamos el padding horizontal para espacio adicional */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.headerLogo {
+  width: auto; /* Utilizamos auto para que el tamaño se ajuste automáticamente */
+  height: 50px; /* Altura fija para mantener proporciones */
+  margin-right: 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.4rem;
+  margin-left: 20px;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+/* Media query para ajustar estilos en dispositivos pequeños */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; /* Reducimos el padding en dispositivos móviles */
+  }
+
+  .headerLogo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLink {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
