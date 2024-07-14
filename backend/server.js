@@ -7,21 +7,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Configuración de CORS
-const allowedOrigins = ['http://localhost:3000', 'https://proyectoreact-nine.vercel.app/']; 
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('No permitido por CORS'));
-    }
-  },
-  methods: 'GET,POST',
-  allowedHeaders: 'Content-Type'
-}));
+app.use(cors());
 
+// Middleware para parsear JSON
 app.use(express.json());
-
 
 app.use((req, res, next) => {
     console.log(req.method, req.url); 
